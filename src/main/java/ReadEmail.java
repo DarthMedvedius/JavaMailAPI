@@ -15,7 +15,7 @@ import javax.mail.Store;
 
 public class ReadEmail {
 
-    public static void readEmail() {
+    public void readEmail() {
         final String PROPS_FILE = "email.properties";
         String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
         String appConfigPath = rootPath + PROPS_FILE;
@@ -58,7 +58,7 @@ public class ReadEmail {
     }
 
     public static void main(String[] args) {
-        readEmail();
+        new ReadEmail().readEmail();
     }
 
 }
